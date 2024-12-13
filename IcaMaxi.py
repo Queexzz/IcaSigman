@@ -1,12 +1,17 @@
+
+#__author__  = Richard Whyte
+#__version__ = 1.6
+#__email__   = Richard.whyte@elev.ga.ntig.se
+
+#IcaMaxi.PY: A database that should mimic a swedish store brand ICA
+
+
 import pygame
 import sys
 import csv
 import locale
 import os
 
-#__author__  = Richard Whyte
-#__version__ = 1.5
-#__email__   = Richard.whyte@elev.ga.ntig.se
 
 # Initialize Pygame
 pygame.init()
