@@ -7,11 +7,11 @@ id,name,desc,price,quantity
 6,Bananer 1kg,Ekologiska bananer rika på kalium.,30.0,50
 7,Kaffe 500g,Mörkrostat kaffe med rik smak.,60.0,90
 8,Tandkräm,Fluorid tandkräm för starka tänder.,30.0,200
-9,Tvättmedel 1kg,Effektivt tvättmedel för alla typer av tvätt.,70.0,70
+9,Tvättmedel,Effektivt tvättmedel för alla typer av tvätt.,70.0,70
 10,Schampo,Återfuktande schampo för alla hårtyper.,45.0,130
 11,Diskmedel,Miljövänligt diskmedel för skinande disk.,40.0,110
-12,Toalettpapper 10-pack,Mjukt och starkt toalettpapper.,60.0,60
+12,Toalettpapper,Mjukt och starkt toalettpapper.,60.0,60
 13,Potatis 2kg,Svenska potatisar perfekta för all matlagning.,45.0,90
 14,Tomater 1kg,Färska tomater för sallader och matlagning.,40.0,90
-15,Kycklingbröst 1kg,Kycklingbröst av hög kvalitet.,90.0,50
-
+15,Kycklingbröst,Kycklingbröst av hög kvalitet.,90.0,50
+16,Fiskenät,Fint fiskenät,tretiofem kr,femtio
