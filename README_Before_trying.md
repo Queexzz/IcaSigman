@@ -1,1 +1,1 @@
-Only IcaMaxi.py and Ica_data.csv is important to run the folder programe
+Only IcaMaxi.py, Ica_data.csv and Ica B.jpg is important to run the folder programe
