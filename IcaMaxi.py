@@ -20,8 +20,8 @@ pygame.display.set_caption('Product List')  # What the tab is called
 
 # Set up fonts
 header_font = pygame.font.SysFont('arial', 28, bold=True)  # Sets up fonts through system in pygame
-font = pygame.font.SysFont('arial', 20)  #  font for layout
-button_font = pygame.font.SysFont('arial', 30, bold=True)  #  button font for layout
+font = pygame.font.SysFont('arial', 20)  # Font for layout
+button_font = pygame.font.SysFont('arial', 30, bold=True)  # Button font for layout
 
 locale.setlocale(locale.LC_ALL, 'sv_SE.UTF-8')  # Sets the currency and time to Sweden
 
@@ -93,7 +93,7 @@ def render_product_list():
     # Create and name buttons
     pygame.draw.rect(window, dark_gray, button_add)
     button_text = button_font.render("Add", True, white)
-    text_rect = button_text.get_rect(center=button_add.center)
+    text_rect = button_text.get_rect(center=button_add .center)
     window.blit(button_text, text_rect)
 
     pygame.draw.rect(window, dark_gray, button_remove)
@@ -134,8 +134,22 @@ def render_product_list():
 def add_product():
     name = input("Enter product name: ")
     desc = input("Enter product description: ")
-    price = input("Enter product price: ")  # Store price as string
-    quantity = input("Enter product quantity: ")  # Store quantity as string
+    
+    # Validate price input
+    while True:
+        price = input("Enter product price: ")
+        if price.replace('.', '', 1).isdigit():  # Allow one decimal point
+            break
+        else:
+            print("Invalid input. Please enter a numeric value for the price.")
+
+    # Validate quantity input
+    while True:
+        quantity = input("Enter product quantity: ")
+        if quantity.isdigit():  # Only allow integers
+            break
+        else:
+            print("Invalid input. Please enter a numeric value for the quantity.")
 
     new_id = max(product['id'] for product in products) + 1 if products else 1
     new_product = {
@@ -179,8 +193,25 @@ def change_product():
         if product["id"] == id:
             product['name'] = input("Enter new name: ")
             product['desc'] = input("Enter new description: ")
-            product['price'] = input("Enter new price: ")  # Store new price as string
-            product['quantity'] = input("Enter new quantity: ")  # Store new quantity as string
+
+            
+            while True:
+                price = input("Enter new price: ")
+                if price.isdigit(): 
+                    product['price'] = price
+                    break
+                else:
+                    print("Invalid input.")
+
+            
+            while True:
+                quantity = input("Enter new quantity: ")
+                if quantity.isdigit():  
+                    product['quantity'] = quantity
+                    break
+                else:
+                    print("Invalid input.")
+
             save_data('Ica_data.csv', products)
             print(f"Product with id: {product['id']} was changed")
             return
